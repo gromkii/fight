@@ -4,6 +4,9 @@ var methodOverride = require('method-override'),
     index          = require('./routes/index'),
     app            = express();
 
+
+app.use(express.static(__dirname + '/public'));
+app.use('/styles', express.static('public'));
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 app.set('port', (process.env.PORT || 3000));
@@ -11,7 +14,6 @@ app.set('port', (process.env.PORT || 3000));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use(express.static('public'));
 
 app.use('/', index);
 
