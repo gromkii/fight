@@ -8,14 +8,14 @@ exports.up = function(knex, Promise) {
       .references('id')
       .inTable('users')
       .onDelete('cascade');
-  }
   table.integer('user2_id')
     .unsigned()
     .index()
     .references('id')
     .inTable('users')
     .onDelete('cascade');
-});
+  });
+}
 
 exports.down = function(knex, Promise) {
   return knex.schema.createTable('fights');
