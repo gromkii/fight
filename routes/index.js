@@ -7,4 +7,10 @@ router.route('/')
     res.render('index/index');
   });
 
+router.route('/login')
+  // Show login page.
+  .get( (req, res) => {
+    res.render('index/login');
+  })
+
 module.exports = router;
