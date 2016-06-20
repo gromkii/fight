@@ -11,6 +11,6 @@ router.route('/login')
   // Show login page.
   .get( (req, res) => {
     res.render('index/login');
-  })
+  });
 
 module.exports = router;

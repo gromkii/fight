@@ -1,5 +1,25 @@
 <% include ../partials/header %>
 
 <!-- Login shit goes here. -->
+<div class="container-fluid">
+<section class="row top-section">
+  <div class="col-xs-3"></div>
+  <div class="col-xs-6">
+    <form action="/login" method="POST">
+      <fieldset class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" name="username" value="">
+      </fieldset>
+
+      <fieldset class="form-group">
+        <label for="password">Password</label>
+        <input type="text" class="form-control" name="password" value="">
+      </fieldset>
+
+      <button type="submit" class="btn btn-primary pull-right">Submit</button>
+    </form>
+  </div>
+</section>
+</div>
 
 <% include ../partials/footer %>
