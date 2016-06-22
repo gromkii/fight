@@ -5,6 +5,8 @@ var methodOverride = require('method-override'),
     app            = express();
 
 
+// Add session shit. Check out postgres + passport?
+
 app.use(express.static(__dirname + '/public'));
 app.use('/styles', express.static('public'));
 app.set('view engine', 'ejs');
